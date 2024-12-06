@@ -1,122 +1,300 @@
-hiii guys
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A simple webpage example">
-  <title>My Simple Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyshnavi portfolio | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    header {
-      background-color: #4CAF50;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa; /* Lighter background color */
+            color: #333;
+            line-height: 1.6;
+        }
 
-    nav {
-      background-color: #333;
-    }
+        /* Global Styles */
+        header {
+            background-color: #1d3557; /* Dark blue background */
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      text-align: center;
-    }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
 
-    nav ul li {
-      display: inline;
-      margin: 0 15px;
-    }
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px;
-      display: inline-block;
-    }
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
 
-    nav ul li a:hover {
-      background-color: #575757;
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-    main {
-      padding: 20px;
-    }
+        nav a:hover {
+            border-bottom: 2px solid #e74c3c;
+        }
 
-    section {
-      margin-bottom: 20px;
-    }
+        /* About Section */
+        #about {
+            padding: 60px 20px;
+            background-color: white;
+            text-align: center;
+        }
 
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid #e74c3c;
+        }
+
+        /* Skills Section */
+        #skills {
+            background-color: #ecf0f1;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #skills h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            background-color: #fff;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex-basis: 250px;
+            text-align: center;
+        }
+
+        .skill h3 {
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+            color: #2c3e50;
+        }
+
+        /* Projects Section */
+        #projects {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        #projects h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background-color: #fff;
+            padding: 30px;
+            margin: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 14px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-size: 1.1rem;
+        }
+
+        .project-card a:hover {
+            color: #2c3e50;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #1d3557;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #contact p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.1rem;
+        }
+
+        footer a {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header>
-    <h1>Welcome to My Simple Website</h1>
-  </header>
+    <header>
+        <h1>Vyshnav's portfolio</h1>
+        <p>Web Developer | Designer | Creator</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Main Content -->
-  <main>
-    <!-- Home Section -->
-    <section id="home">
-      <h2>Home</h2>
-      <p>Welcome to the homepage of my simple website. Here you'll find all the information you need!</p>
-    </section>
-
-    <!-- About Section -->
     <section id="about">
-      <h2>About</h2>
-      <p>This is a basic example of a webpage structure, created to help beginners learn HTML and CSS.</p>
+        <h2>About Me</h2>
+        <img src="https://i.pinimg.com/originals/33/9f/8b/339f8b7cb5a1434f170f9a9c69d27a05.jpg" alt="Your Photo" class="profile-img">
+        <p>
+            Hi! I’m N.Vyshnavi, a passionate Web Developer with a love for clean design and great user experiences.
+            I specialize in building responsive websites, web applications, and modern UI designs. I am always looking
+            for new challenges and opportunities to improve my skills.
+        </p>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-      <h2>Services</h2>
-      <p>We offer various web development services, including HTML, CSS, JavaScript, and more.</p>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>HTML & CSS</h3>
+                <p>Building solid foundations for any website or application.</p>
+            </div>
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>Making websites interactive and dynamic.</p>
+            </div>
+            <div class="skill">
+                <h3>React</h3>
+                <p>Building modern, component-based UI with React.</p>
+            </div>
+            <div class="skill">
+                <h3>Node.js</h3>
+                <p>Creating back-end services and APIs.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Contact Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="https://ih1.redbubble.net/image.3607614648.8163/raf,750x1000,075,t,FCD9D9:9126c0bfe7.jpg" alt="Project 1">
+                <h3>Project 1: Portfolio Website</h3>
+                <p>A modern portfolio website showcasing my skills and projects.</p>
+                <a href="https://github.com/your-repo-link" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l1mh7rk0/poster/0/d/h/medium-shinchan-cartoon-wall-poster-decorative-poster-for-original-imagd5f6m5zwvhhy.jpeg?q=90&crop=false" alt="Project 2">
+                <h3>Project 2: E-commerce Website</h3>
+                <p>An e-commerce platform for online shopping with payment gateway integration.</p>
+                <a href="https://github.com/your-repo-link" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
-      <h2>Contact</h2>
-      <p>If you want to get in touch, please feel free to <a href="mailto:contact@example.com">email us</a>.</p>
-    </section>
-  </main>
-
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2024 My Simple Website</p>
-  </footer>
-
-</body>
-</html>
+        <h2>Contact Me</h2>
+        <p>If you're interested in working with me or just want to say hi, feel free to reach out!</p>
+        <a href="mailto:your
